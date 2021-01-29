@@ -1,3 +1,7 @@
+<?php
+include "./php/coneccion.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,27 +59,44 @@
             </button>
           </div>
         </div>
+      
         <div class="card-body">
-            <form action="" class="row">
+            <?php
+              if(isset($_GET['error'])){
+            
+              echo ''
+
+            ?>
+                <div class="alert alert-danger">
+                  <b>Error:</b>
+                    <?php
+                    echo $_GET['error'];
+                    
+                    ?>
+                </div>
+              <?php
+              }   
+            ?>
+            <form action="./php/insertaeUsuario.php" class="row" method="POST">
                 <div class="col-4">
                     <label for="">Nombre</label>
-                    <input type="text" class="form-control" placeholder="inserta tu nombre">
+                    <input type="text" class="form-control" placeholder="inserta tu nombre" name="nom" id="txtNombre" required>
                 </div>
-                <div class="col-4">
+                <div class="col-4"> 
                     <label for="">Apellido</label>
-                    <input type="text" class="form-control" placeholder="inserta tu Apellido">
+                    <input type="text" class="form-control" placeholder="inserta tu Apellido" name="ap" id="txtAP" required> 
                 </div>
                 <div class="col-4">
                     <label for="">Email</label>
-                    <input type="email" class="form-control" placeholder="inserta tu email">
+                    <input type="email" class="form-control" placeholder="inserta tu email" name="email" required>
                 </div>
                 <div class="col-4">
                     <label for="">Password</label>
-                    <input type="password" class="form-control" placeholder="inserta una password">
+                    <input type="password" class="form-control" placeholder="inserta una password" name="p1" required>
                 </div>   
                 <div class="col-4">
                     <label for="">Confirmar Password</label>
-                    <input type="text" class="form-control" placeholder="confirma tu password">
+                    <input type="password" class="form-control" placeholder="confirma tu password" name="p2" required>
                 </div>
                 
                 <div class="col-4 p-2">
