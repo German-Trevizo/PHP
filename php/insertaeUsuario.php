@@ -18,4 +18,5 @@ if($p1 != $p2){
         echo "insertado coerrectamente";
     }
 
+    header("Location: ./../users.php");
 ?>
