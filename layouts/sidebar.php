@@ -1,3 +1,4 @@
+
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="../../index3.html" class="brand-link">
@@ -42,7 +43,7 @@
                 </a>
             </li>      
             <li class="nav-item">
-                <a href="../widgets.html" class="nav-link">
+                <a href="../PHP/productos.php" class="nav-link">
                 <i class="nav-icon fas fa-trash"></i>
                     <p>
                         Productos
